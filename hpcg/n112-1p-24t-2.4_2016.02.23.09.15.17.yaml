@@ -1,0 +1,144 @@
+n112-1p-24t version: 2.4
+Machine Summary: 
+  Distributed Processes: 1
+  Threads per processes: 24
+Option Summary: 
+  fuse-spmv: 1
+  overlap: 1
+Global Problem Dimensions: 
+  Global nx: 112
+  Global ny: 112
+  Global nz: 112
+Processor Dimensions: 
+  npx: 1
+  npy: 1
+  npz: 1
+Local Domain Dimensions: 
+  nx: 112
+  ny: 112
+  nz: 112
+########## Problem Summary  ##########: 
+Setup Information: 
+  Setup Time: 0.0407171
+Linear System Information: 
+  Number of Equations: 1404928
+  Number of Nonzero Terms: 37259704
+Multigrid Information: 
+  Number of coarse grid levels: 3
+  Coarse Grids: 
+    Grid Level: 1
+    Number of Equations: 175616
+    Number of Nonzero Terms: 4574296
+    Number of Presmoother Steps: 1
+    Number of Postsmoother Steps: 1
+    Grid Level: 2
+    Number of Equations: 21952
+    Number of Nonzero Terms: 551368
+    Number of Presmoother Steps: 1
+    Number of Postsmoother Steps: 1
+    Grid Level: 3
+    Number of Equations: 2744
+    Number of Nonzero Terms: 64000
+    Number of Presmoother Steps: 1
+    Number of Postsmoother Steps: 1
+########## Validation Testing Summary  ##########: 
+Spectral Convergence Tests: 
+  Result: PASSED
+  Unpreconditioned: 
+    Maximum iteration count: 11
+    Expected iteration count: 12
+  Preconditioned: 
+    Maximum iteration count: 1
+    Expected iteration count: 2
+Departure from Symmetry |x'Ay-y'Ax|/(2*||x||*||A||*||y||)/epsilon: 
+  Result: PASSED
+  Departure for SpMV: 1.87624e-09
+  Departure for MG: 4.6906e-10
+########## Iterations Summary  ##########: 
+Iteration Count Information: 
+  Result: PASSED
+  Reference CG iterations per set: 50
+  Optimized CG iterations per set: 51
+  Total number of reference iterations: 50
+  Total number of optimized iterations: 51
+########## Reproducibility Summary  ##########: 
+Reproducibility Information: 
+  Result: PASSED
+  Scaled residual mean: 1.24648e-07
+  Scaled residual variance: 0
+########## Performance Summary (times in sec) ##########: 
+Benchmark Time Summary: 
+  Optimization phase: 0.200873
+  DDOT: 2.71797e-05
+  WAXPBY: 0.0347192
+  SpMV: 0.398941
+  MG: 1.90832
+    forward: 0.927517
+    backward: 0.929287
+    Level 0: 1.67054
+      Pre-smooth: 0.854749
+      Post-smooth: 0.775097
+      SpMV: 0.000455618
+      Restriction: 0.00784731
+      Prolongation: 0.0136893
+    Level 1: 0.180801
+      Pre-smooth: 0.104548
+      Post-smooth: 0.0729837
+      SpMV: 0.000315905
+      Restriction: 0.000813484
+      Prolongation: 0.000991106
+    Level 2: 0.0450325
+      Pre-smooth: 0.023252
+      Post-smooth: 0.0203147
+      SpMV: 0.000299215
+      Restriction: 0.000279665
+      Prolongation: 0.000349522
+    Level 3: 0.0118744
+  Halo: 0.00733733
+    Setup: 0
+    Start-recv: 0
+    Fill-up-send-buf: 0.0071249
+    Start-send: 0
+    Wait: 0.000212431
+  Total: 2.37313
+Floating Point Operations Summary: 
+  Raw DDOT: 4.32718e+08
+  Raw WAXPBY: 4.32718e+08
+  Raw SpMV: 3.87501e+09
+  Raw MG: 2.16296e+10
+  Total: 2.637e+10
+  Total with convergence overhead: 2.5853e+10
+GFLOP/s Summary: 
+  Raw DDOT: 15920.6
+  Raw WAXPBY: 12.4633
+  Raw SpMV: 9.71323
+  Raw MG: 11.3344
+    Level 0: 11.375
+      Pre-smooth: 8.89265
+      Post-smooth: 9.80648
+      SpMV: 8341.4
+    Level 1: 12.9031
+      Pre-smooth: 8.92567
+      Post-smooth: 12.7858
+      SpMV: 1476.96
+    Level 2: 6.24433
+      Pre-smooth: 4.83739
+      Post-smooth: 5.53683
+      SpMV: 187.957
+    Level 3: 1.0995
+  Raw Total: 11.1119
+  Total with convergence overhead: 10.894
+  Total with convergence and optimization phase overhead: 10.8026
+  Total with convergence and optimization phase overhead (HPCG 3.0): 10.6219
+User Optimization Overheads: 
+  Problem setup time (sec): 0.0407171
+  Optimization phase time (sec): 0.200873
+  Optimization phase time vs reference SpMV+MG time: 0
+DDOT Timing Variations: 
+  Min DDOT MPI_Allreduce time: -7.42657e+10
+  Max DDOT MPI_Allreduce time: -7.42657e+10
+  Avg DDOT MPI_Allreduce time: -7.42657e+10
+__________ Final Summary __________: 
+  HPCG result is VALID with a GFLOP/s rating of: 10.8026
+  Results are valid but execution time (sec) is: 2.37313
+  Official results execution time (sec) must be at least: 1800
