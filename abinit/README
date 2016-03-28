@@ -1,3 +1,10 @@
 # Abinit
 background: http://www.abinit.org/doc/helpfiles/for-v7.10/tutorial/welcome.html
 install : http://www.abinit.org/doc/helpfiles/for-v7.10/install_notes/install.html
+
+1. ./configure
+2. make -j4
+3. make install
+4. make test_fast
+5. ./runtests.py -j4 
+
